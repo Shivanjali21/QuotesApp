@@ -8,11 +8,11 @@ plugins {
 
 android {
     namespace = "com.practice.quotesapp"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.practice.quotesapp"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -30,14 +30,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin{
+      jvmToolchain(17)
     }
     buildFeatures {
         compose = true
+    }
+    composeOptions {
+      kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
 
@@ -59,6 +62,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.material.icons.extended)
 
     implementation(libs.work.manager)
     implementation(libs.work.manager.dagger)
