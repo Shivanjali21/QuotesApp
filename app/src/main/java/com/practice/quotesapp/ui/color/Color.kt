@@ -1,4 +1,4 @@
-package com.practice.quotesapp.ui.theme
+package com.practice.quotesapp.ui.color
 
 import androidx.compose.ui.graphics.Color
 

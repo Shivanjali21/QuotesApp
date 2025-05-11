@@ -1,4 +1,4 @@
-package com.practice.quotesapp.ui.theme
+package com.practice.quotesapp.ui.type
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
