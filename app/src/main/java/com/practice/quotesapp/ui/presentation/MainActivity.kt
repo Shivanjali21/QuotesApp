@@ -82,8 +82,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     items(uiState.data) {
                         Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth().padding(6.dp)
                         ) {
                             Column(modifier = Modifier.padding(8.dp)) {
                                 Text(text = it.quote)
@@ -92,9 +91,7 @@ class MainActivity : ComponentActivity() {
                                 Spacer(modifier = Modifier.height(8.dp))
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-
-                                    ) {
+                                    horizontalArrangement = Arrangement.SpaceBetween) {
                                     Text(text = formatTimeStampToDMY(it.time),
                                         color = Color.Red)
                                     Text(text = it.workType)
