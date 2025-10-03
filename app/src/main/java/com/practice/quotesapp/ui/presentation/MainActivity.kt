@@ -63,6 +63,7 @@ class MainActivity : ComponentActivity() {
                     Icon(imageVector = Icons.Default.Refresh, contentDescription = null)
                 }
             })
+        }) { it ->
             if (uiState.data.isEmpty()) {
                 Box(
                     modifier = Modifier
