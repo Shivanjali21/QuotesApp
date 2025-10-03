@@ -63,7 +63,6 @@ class MainActivity : ComponentActivity() {
                     Icon(imageVector = Icons.Default.Refresh, contentDescription = null)
                 }
             })
-        }) { it ->
             if (uiState.data.isEmpty()) {
                 Box(
                     modifier = Modifier
@@ -83,7 +82,6 @@ class MainActivity : ComponentActivity() {
                     items(uiState.data) {
                         Card(
                             modifier = Modifier
-                                .padding(6.dp)
                                 .fillMaxWidth()
                         ) {
                             Column(modifier = Modifier.padding(8.dp)) {
